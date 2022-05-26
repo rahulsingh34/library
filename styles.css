@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+}
+
+div {
+	border: red solid 1px;
+}
+
+.bg-modal {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-content {
+	background-color: white;
+	border-radius: 20px;
+	width: 400px;
+	height: 500px;
+	position: relative;
+	
+}
+
+#addBook {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	grid-template-rows: repeat(5, 1fr);
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 14px;
+	font-size: 42px;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
