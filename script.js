@@ -2,6 +2,9 @@ let myLibrary = [];
 
 const form = document.getElementById("addBook");
 const library = document.getElementById("library");
+const openModal = document.getElementById("add-book");
+const closeModal = document.querySelector(".close")
+const modal = document.querySelector(".bg-modal")
 let index = 0;
 
 form.addEventListener("submit", () => {
@@ -35,6 +38,7 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(title, author, pages, read) {
 	myLibrary.push({title, author, pages, read, index});
 	createCards();
+	modal.style.display = "none";
 }
 	
 function createCards() {
@@ -99,10 +103,6 @@ function readOrNot() {
 		})
 	});
 }
-
-const openModal = document.getElementById("add-book");
-const closeModal = document.querySelector(".close")
-const modal = document.querySelector(".bg-modal")
 
 openModal.addEventListener("click", () => {
 	modal.style.display = "flex";
