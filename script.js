@@ -60,6 +60,12 @@ function createCards() {
 		pages.innerText = myLibrary[i].pages + " pages";
 		read.innerText = myLibrary[i].read;
 		remove.innerText = "Remove";
+		if (read.innerText == "Not Read") {
+			card.classList.add("book-is-read");
+		}
+		else {
+			card.classList.add("book-is-not-read");
+		}
 		card.appendChild(title);
 		card.appendChild(author);
 		card.appendChild(pages);
@@ -110,4 +116,5 @@ openModal.addEventListener("click", () => {
 
 closeModal.addEventListener("click", () => {
 	modal.style.display = "none";
+	form.reset();
 });

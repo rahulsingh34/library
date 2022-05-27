@@ -15,8 +15,10 @@
 	<div class="header">
 		<h1 class="logo">library</h1>
 	</div>
-	<button id="add-book">Add Book</button>
-	<div id="library">
+	<div id="add-book"><button id="main">Add Book</button></div>
+	<div class="bucket">
+		<div id="library">
+		</div>
 	</div>
 	<div class="bg-modal">
 		<div class="modal-content">
@@ -24,15 +26,15 @@
 			<form id="addBook" action="">
 				<div class="field">
 					<h1>Title</h1>
-					<input type="text" name="title" id="title" placeholder="title" required>
+					<input type="text" name="title" id="title" required>
 				</div>
 				<div class="field">
 					<h1>Author</h1>
-					<input type="text" name="author" id="author" placeholder="author" required>
+					<input type="text" name="author" id="author" required>
 				</div>
 				<div class="field">
 					<h1>Number of Pages</h1>
-					<input type="number" name="pages" id="pages" placeholder="pages" min="1" required>
+					<input type="number" name="pages" id="pages" min="1" required>
 				</div>
 				<div class="field">
 					<h1>Have you read the book?</h1>

@@ -1,3 +1,8 @@
+:root {
+	--grey: #F3F3F3;
+	--grey2: #ECECEC ;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -8,9 +13,40 @@ body {
 	height: 100vh;
 }
 
-div {
-	border: red solid 1px;
+.header {
+	padding: 10px;
+	padding-left: 30px;
+	background-color: var(--grey);
 }
+
+#add-book {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	height: 40px;
+	width: 100px;
+	border-radius: 20px;
+	border: none;
+	background: white;
+	cursor: pointer;
+	color: black;
+}
+
+#main {	
+	background: linear-gradient(0.25turn, var(--grey), var(--grey2));
+	width: 150px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+button:hover {
+	border: rgba(0, 0, 0, 0.5) solid 1px;
+}
+
 
 .bg-modal {
 	height: 100%;
@@ -24,12 +60,32 @@ div {
 }
 
 .modal-content {
-	background-color: white;
+	background-color: var(--grey);
 	border-radius: 20px;
 	width: 400px;
 	height: 500px;
-	position: relative;
-	
+	position: relative;	
+}
+
+.field {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	text-align: center;
+}
+
+.field h1 {
+	padding: 10px;
+}
+
+input {
+	height: 25px;
+	border-radius: 20px;
+	border: rgba(0, 0, 0, 0.5) solid 1px;
+	width: 200px;
+	padding-left: 10px;
+
 }
 
 #addBook {
@@ -48,4 +104,47 @@ div {
 	font-size: 42px;
 	transform: rotate(45deg);
 	cursor: pointer;
+}
+
+.bucket {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#library {
+	width: 800px;
+	padding: 20px;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+	gap: 20px;
+}
+
+.book {
+	background-color: var(--grey);
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	height: 275px;
+	width: 250px;
+	align-items: center;
+	justify-content: center;
+}
+
+.book h1 {
+	padding: 5px;
+}
+
+.book button {
+	margin: 5px;
+}
+
+.book-is-read {
+	border: #90EF90 solid;
+}
+
+.book-is-not-read {
+	border: #FC6C85 solid;
 }
